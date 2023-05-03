@@ -10,16 +10,20 @@
   @extend .mb-md;
   overflow: hidden;
 
-  & .mv img,
-  & .mv source {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+  & .mv {
 
-    @include mq(md) {
-      height: 800px;
+    & img,
+    & source {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+
+      @include mq(md) {
+        height: 800px;
+      }
     }
   }
+
 
   & .logo {
     position: absolute;
