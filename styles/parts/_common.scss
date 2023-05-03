@@ -1,0 +1,196 @@
+@use "../globals" as *;
+
+body {
+  font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+
+}
+
+.mb-md {
+  margin-bottom: 72px !important;
+
+  @include mq(md) {
+    margin-bottom: 90px !important;
+  }
+}
+
+.p-side-md {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq(md) {
+    padding-left: 19.5%;
+    padding-right: 19.5%;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+
+  @include mq(lg) {
+    padding-bottom: 150px !important;
+  }
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.head-text {
+  margin-bottom: 40px;
+  font-size: 12px;
+
+  @include mq(md) {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.purple {
+  color: $cWineRed;
+}
+
+// font
+.font-sm {
+  font-size: 14px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+.font-md {
+  font-size: 17px;
+
+  @include mq(lg) {
+    font-size: 19px;
+  }
+}
+
+.font-lr {
+  font-size: 17px;
+
+  @include mq(lg) {
+    font-size: 23px;
+  }
+}
+
+.font-lg {
+  font-size: 25px;
+
+  @include mq(lg) {
+    font-size: 36px;
+  }
+}
+
+.main-title {
+  @extend .font-lg;
+  font-weight: 600;
+  margin-bottom: 0;
+  display: block;
+}
+
+.sub-title {
+  text-align: center;
+  padding: 4px 0;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  font-family: 游ゴシック, Bold;
+  line-height: 24px;
+  font: normal normal bold 14px/25px Yu Gothic;
+  max-width: 792px;
+  margin: 0 auto 20px;
+}
+
+.visible-mb {
+  //モバイルのみ表示
+  display: block;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.visible-pc {
+  //PCのみ表示
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.pc {
+  display: none !important;
+
+  @include mq(md) {
+    display: block !important;
+  }
+}
+
+// facebook
+.fb_iframe_widget {
+  display: block !important;
+  margin: 0 auto 48px !important;
+  width: 380px;
+  height: 600px;
+
+  @include mq(md) {
+    width: 480px;
+  }
+}
+
+// Twitter
+.twitter-timeline {
+  display: block;
+  width: 380px;
+  height: 600px !important;
+  margin: 0 auto 48px !important;
+  overflow-y: scroll;
+
+  @include mq(md) {
+    width: 480px;
+  }
+}
