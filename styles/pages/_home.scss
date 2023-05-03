@@ -8,7 +8,6 @@
   position: relative;
   z-index: 100;
   @extend .mb-md;
-  overflow: hidden;
 
   & .mv {
 
@@ -89,6 +88,7 @@
     width: 180px;
     top: 370px;
     right: 16px;
+    z-index: 2000;
 
     @include mq(md) {
       top: 536px;
@@ -220,6 +220,7 @@
             & img {
 
               width: 200px;
+              margin-top: -50px;
 
               @include mq(md) {
                 width: 300px;
@@ -480,6 +481,9 @@
                   height: auto;
                   padding: 20px;
                   background-color: #F5F5F5;
+                  opacity: 0;
+                  transform: translateY(100%);
+                  overflow-y: hidden;
 
                   & .subject {
                     color: white;
@@ -498,6 +502,24 @@
 
                   & .instructor-comment {
                     font-size: 14px;
+                  }
+
+                  &.inview {
+                    @include animation($name: kf-slideinAnimation,
+                      $duration: 0.7s,
+                      $timing-function: cubic-bezier(0.25, 0, 0.3, 0.87));
+                  }
+
+                  @keyframes kf-slideinAnimation {
+                    0% {
+                      opacity: 0;
+                      transform: translateY(100%);
+                    }
+
+                    100% {
+                      opacity: 1;
+                      transform: none;
+                    }
                   }
                 }
               }
@@ -620,9 +642,12 @@
 
               & .support-menu {
                 @extend .flex;
-                width: 528px;
                 justify-content: center;
                 margin: 0 auto;
+
+                @include mq(md) {
+                  width: 528px;
+                }
 
                 & li {
                   position: relative;

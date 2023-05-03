@@ -217,7 +217,6 @@ img {
 #header {
   position: relative;
   z-index: 100;
-  overflow: hidden;
 }
 #header .mv img, #header .mv source {
   width: 100%;
@@ -302,6 +301,7 @@ img {
   width: 180px;
   top: 370px;
   right: 16px;
+  z-index: 2000;
 }
 @media screen and (min-width: 600px) {
   #header .badge {
@@ -450,6 +450,7 @@ img {
 }
 #main .main-container #feature .feature-contents .section-title-wrap .section-title img {
   width: 200px;
+  margin-top: -50px;
 }
 @media screen and (min-width: 600px) {
   #main .main-container #feature .feature-contents .section-title-wrap .section-title img {
@@ -658,6 +659,10 @@ img {
   height: auto;
   padding: 20px;
   background-color: #F5F5F5;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  overflow-y: hidden;
 }
 #main .main-container #feature .feature-contents #feature-3 .feature-inner .instructor-container .instructor .instructor-card .subject {
   color: white;
@@ -674,6 +679,46 @@ img {
 }
 #main .main-container #feature .feature-contents #feature-3 .feature-inner .instructor-container .instructor .instructor-card .instructor-comment {
   font-size: 14px;
+}
+#main .main-container #feature .feature-contents #feature-3 .feature-inner .instructor-container .instructor .instructor-card.inview {
+  -webkit-animation-name: kf-slideinAnimation;
+          animation-name: kf-slideinAnimation;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0.3, 0.87);
+          animation-timing-function: cubic-bezier(0.25, 0, 0.3, 0.87);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes kf-slideinAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes kf-slideinAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 #main .main-container #feature .feature-contents #feature-4 .feature-inner .feature-inner-wrap .feature-title {
   text-align: center;
@@ -765,12 +810,16 @@ img {
   }
 }
 #main .main-container #feature .feature-contents #feature-5 .feature-inner .support .support-menu {
-  width: 528px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  #main .main-container #feature .feature-contents #feature-5 .feature-inner .support .support-menu {
+    width: 528px;
+  }
 }
 #main .main-container #feature .feature-contents #feature-5 .feature-inner .support .support-menu li {
   position: relative;
