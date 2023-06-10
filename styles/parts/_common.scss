@@ -1,7 +1,7 @@
 @use "../globals" as *;
 
 body {
-  font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   margin: 0;
 }
 
@@ -43,6 +43,11 @@ img {
 .p-side-md {
   padding-left: 20px;
   padding-right: 20px;
+
+  @include mq(md) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   @include mq(md) {
     padding-left: 19.5%;
@@ -157,7 +162,7 @@ img {
   //PCのみ表示
   display: none;
 
-  @include mq(md) {
+  @include mq(lg) {
     display: block;
   }
 }
@@ -174,7 +179,7 @@ img {
 .fb_iframe_widget {
   display: block !important;
   margin: 0 auto 48px !important;
-  width: 380px;
+  width: 300px !important;
   height: 600px;
 
   @include mq(md) {
@@ -182,10 +187,16 @@ img {
   }
 }
 
+._2p3a {
+  min-width: 150px !important;
+  width: 280px !important;
+
+}
+
 // Twitter
 .twitter-timeline {
   display: block;
-  width: 380px;
+  width: 300px;
   height: 600px !important;
   margin: 0 auto 48px !important;
   overflow-y: scroll;
@@ -193,4 +204,8 @@ img {
   @include mq(md) {
     width: 480px;
   }
+}
+
+.feature-title {
+  text-align: center;
 }

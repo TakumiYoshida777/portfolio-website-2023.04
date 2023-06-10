@@ -21,7 +21,7 @@
 
 <body>
     <div id="global-container">
-        <div id="header">
+        <header id="header" class="header">
             <div class="mv">
                 <picture>
                     <source media="(max-width: 768px)" srcset="images/pictures/SP/mv-sp@2x.webp">
@@ -48,7 +48,7 @@
             <div class="badge">
                 <img src="images/img/badge.svg" alt="満足度100%。※2022年3月時点 当社独自調査により算出">
             </div>
-        </div>
+        </header>
         <div id="main">
             <div class="main-container">
                 <section id="course">
@@ -58,23 +58,25 @@
                         </h2>
                         <div class="content">
                             <div class="inner-content">
-                                <div class="content-item">
+                                <div class="content-item first-content-item">
                                     <img class="course-group-title" src="images/img/course-group-title.svg"
                                         alt="仲間と頑張るグループ講習">
-                                    <img class="course-group-img" src="images/msk/course-group.webp" alt="">
-                                    <p>最大5名でのグループ講習。分からない問題を教え合 ったり仲間と一緒に頑張りたい人向けの講習です。</p>
+                                    <img class="course-group-img" src="images/msk/course-group.webp"
+                                        alt="最大5名でのグループ講習。分からない問題を教え合 ったり仲間と一緒に頑張りたい人向けの講習です。">
+                                    <p class="content-text">最大5名でのグループ講習。分からない問題を教え合 ったり仲間と一緒に頑張りたい人向けの講習です。</p>
                                 </div>
                                 <div class="content-item">
                                     <img class="course-online-title" src="images/img/course-online-title.svg"
                                         alt="1人で集中 オンライン講習">
                                     <img class="course-online-img" src="images/msk/course-online.webp"
                                         alt="最大5名でのグループ講習。分からない問題を教え合 ったり仲間と一緒に頑張りたい人向けの講習です。">
-                                    <p>完全オンライン型の集中講習。好きな時間に自分の ペースで勉強したい人向けの講習です。</p>
+                                    <p class="content-text">完全オンライン型の集中講習。好きな時間に自分の ペースで勉強したい人向けの講習です。</p>
                                 </div>
                             </div>
                             <div class="course-schedule">
                                 <div class="inner-course-schedule">
-                                    <img src="/images/img/course-schedule-title.svg" alt="どちらのコースも１か月間の短期集中です">
+                                    <img class="first-course-schedule-img" src="/images/img/course-schedule-title.svg"
+                                        alt="どちらのコースも１か月間の短期集中です">
                                     <img src="images/img/course-schedule.svg" alt="スケジュール">
                                 </div>
                             </div>
@@ -183,11 +185,12 @@
                                             <img class="point-titleimg" src="images/img/point.svg" alt="ポイント">
 
                                             <div class="flex-container">
-                                                <div class="point-text">
+                                                <div class="point-text-warp">
                                                     <h4>計算されたカリキュラム</h4>
-                                                    <p>当スクールのカリキュラムは、<span>独自のAIシステム</span>
+                                                    <p class="point-text">当スクールのカリキュラムは、<span
+                                                            class="bg-color-yellow">独自のAIシステム</span>
                                                         を使用して過去の試験内容を解析することで、重要な部分を効率よく学習することができるようにした
-                                                        <span>オリジナルのカリキュラム</span>
+                                                        <span class="bg-color-yellow">オリジナルのカリキュラム</span>
                                                         です。
                                                     </p>
                                                 </div>
@@ -215,7 +218,7 @@
                                             非常に高い満足度を得ています。<br class="pc">
                                             受講前のカウンセリングをしっかりと行い、<br class="pc"> 結果につながるカリキュラムをご提案いたします。</p>
                                     </div>
-                                    <img src="images/pictures/feature2-img@2x.webp" alt="受講生の満足度100%のイメージ画像">
+                                    <img src="images/pictures/feature2-img@2x.webp" alt="3人の女性が太陽に向けて片手を挙げている">
                                 </div>
                             </div>
 
@@ -345,17 +348,17 @@
                                     <div class="follow-up">
                                         <div class="follow-up-card">
                                             <div class="follow-up-card-inner">
-                                                <p>メールでの<br>質問受付</p>
+                                                <p class="follow-up-card-inner-text">メールでの<br>質問受付</p>
                                             </div>
                                         </div>
                                         <div class="follow-up-card">
                                             <div class="follow-up-card-inner">
-                                                <p>進路の相談・<br> アドバイス</p>
+                                                <p class="follow-up-card-inner-text">進路の相談・<br> アドバイス</p>
                                             </div>
                                         </div>
                                         <div class="follow-up-card">
                                             <div class="follow-up-card-inner">
-                                                <p>最新情報の<br> お届け</p>
+                                                <p class="follow-up-card-inner-text">最新情報の<br> お届け</p>
                                             </div>
                                         </div>
                                     </div>
@@ -364,10 +367,13 @@
                                             <img class="point-titleimg" src="images/img/point.svg" alt="ポイント">
 
                                             <div class="flex-container">
-                                                <div class="point-text">
+                                                <div class="point-text-wrap">
                                                     <h4>継続してフォロー</h4>
-                                                    <p>当スクールは、まず何よりも「<span>志望大学への合格</span>」という結果を一番大切に考えて
-                                                        います。講習の中だけでは足りない部分を、講習後に<span>継続してフォロー</span>していくこ とで目標達成へ導きます。
+                                                    <p class="point-text">
+                                                        当スクールは、まず何よりも「<span
+                                                            class="bg-color-yellow">志望大学への合格</span>」という結果を一番大切に考えて
+                                                        います。講習の中だけでは足りない部分を、講習後に<span
+                                                            class="bg-color-yellow">継続してフォロー</span>していくこ とで目標達成へ導きます。
                                                     </p>
                                                 </div>
                                                 <div class="point-img">
@@ -382,12 +388,12 @@
                                             その他のサポート
                                         </div>
                                         <ul class="support-menu">
-                                            <li><a href="">学習計画の相談・アドバイス</a></li>
-                                            <li><a href="">個別質問</a></li>
-                                            <li><a href="">成績の管理と診断</a></li>
-                                            <li><a href="">強化テスト</a></li>
-                                            <li><a href="">自習教材</a></li>
-                                            <li><a href="">自習室完備</a></li>
+                                            <li class="support-menu-list"><a href="">学習計画の相談・アドバイス</a></li>
+                                            <li class="support-menu-list"><a href="">個別質問</a></li>
+                                            <li class="support-menu-list"><a href="">成績の管理と診断</a></li>
+                                            <li class="support-menu-list"><a href="">強化テスト</a></li>
+                                            <li class="support-menu-list"><a href="">自習教材</a></li>
+                                            <li class="support-menu-list"><a href="">自習室完備</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -395,13 +401,12 @@
                         </div>
                     </div>
                 </section>
-
             </div>
         </div>
         <div id="footer">
-            <section id="sns">
+            <section id="sns" class="sns">
                 <div class="facebook">
-                    <h2>
+                    <h2 class="sns-title">
                         Facebook
                     </h2>
                     <div id="fb-root"></div>
@@ -416,7 +421,7 @@
                     </button>
                 </div>
                 <div class="twitter">
-                    <h2>
+                    <h2 class="sns-title">
                         Twitter
                     </h2>
                     <a class="twitter-timeline" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by
@@ -432,7 +437,7 @@
         </div>
 
         <div class="visible-pc">
-            <nav id="nav">
+            <nav id="nav" class="nav">
                 <li><a href="">>&nbsp;無料体験</a></li>
                 <li><a href="">>&nbsp;資料請求</a></li>
                 <li><a href="">>&nbsp;お問い合わせ</a></li>
