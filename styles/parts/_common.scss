@@ -176,22 +176,34 @@ img {
 }
 
 // facebook
-.fb_iframe_widget {
-  display: block !important;
-  margin: 0 auto 48px !important;
-  width: 300px !important;
-  height: 600px;
 
-  @include mq(md) {
-    width: 480px;
-  }
+
+.fb-wrap {
+  width: 100%;
+  text-align: center !important;
+  margin: 0 auto !important;
 }
 
-._2p3a {
-  min-width: 150px !important;
-  width: 280px !important;
-
+.fb-page {
+  text-align: center !important;
+  margin: 0 auto !important;
 }
+
+.facebook {
+  margin-bottom: 48px;
+  width: 300px;
+}
+
+.facebook-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+
 
 // Twitter
 .twitter-timeline {

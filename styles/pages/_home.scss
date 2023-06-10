@@ -379,8 +379,9 @@
     margin-bottom: 50px;
   }
 
-  & .flex-container {
+  & .point-flex-container {
     @extend .flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
 
@@ -567,7 +568,11 @@
 
   & .flex-container {
     @extend .flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    @include mq(lg) {
+      justify-content: space-between;
+    }
   }
 
   .point-text-wrap {
