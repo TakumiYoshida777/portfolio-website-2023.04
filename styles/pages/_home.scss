@@ -36,11 +36,19 @@
     }
   }
 
-  & .catchcopy img {
-    position: absolute;
-    max-width: 210px;
-    top: 80px;
-    left: 20px;
+  & .catchcopy {
+
+    .catchcopy-text {
+      position: absolute;
+      max-width: 400px;
+      top: 80px;
+      left: 20px;
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: 600;
+      padding: 2rem 1rem;
+    }
+
 
     @include mq(md) {
       max-width: 420px;
