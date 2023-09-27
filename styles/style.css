@@ -277,13 +277,21 @@ img {
 }
 .header .catchcopy .catchcopy-text {
   position: absolute;
-  max-width: 400px;
+  max-width: 460px;
   top: 80px;
   left: 20px;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   color: #fff;
   font-weight: 600;
-  padding: 2rem 1rem;
+  padding: 0.75rem 0.5rem;
+}
+@media screen and (min-width: 600px) {
+  .header .catchcopy .catchcopy-text {
+    font-size: 2.5rem;
+    top: 80px;
+    left: 20px;
+    padding: 2rem 1rem;
+  }
 }
 @media screen and (min-width: 600px) {
   .header .catchcopy {
